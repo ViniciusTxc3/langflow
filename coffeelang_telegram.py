@@ -40,7 +40,7 @@ async def handle_response(text: str) -> str:
     
     try:
         chain = await asyncio.to_thread(run_flow_from_json,
-            flow="./flow_coffee_lang.json",
+            flow="./flow_langcoffee_gemini.json",
             input_value=processed,
             fallback_to_env_vars=True, # False by default
             tweaks=TWEAKS)
